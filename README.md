@@ -1,8 +1,6 @@
 # Glass dataset classification
 Altin Rexhepaj, 2020
 
-Multivariate glass dataset classification using Bayesian and Decision Tree classifiers.
-
 ## About
 This program is an exercise in multivariate dataset classification using machine learning techniques. In particular, I implement Naive Bayes, Optimal Bayes, and Decision Tree classifiers<sup>[[1]](http://www.uoitc.edu.iq/images/documents/informatics-institute/Competitive_exam/Artificial_Intelligence.pdf)</sup> to classify between two types of glass: windowed, and non-windowed (binary class classification). Testing and training is done with k-fold cross validation.
 
