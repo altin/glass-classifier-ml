@@ -34,7 +34,6 @@ The dataset I used for this exercise comes from the UCI Machine Learning Reposit
     * 6 tableware
     * 7 headlamps
 
-
 Windowed glass is given by class attributes 1 to 4, and non-windowed glass is given by class-attributes 5 to 7.  
 
 ## Classifiers
@@ -43,20 +42,17 @@ Windowed glass is given by class attributes 1 to 4, and non-windowed glass is gi
 The information gain is calculated using the usual entropy measure for decision trees.
 
 #### Discretisation function
-The dataset attributes are discretised according to the mean of the attributes across all samples.
+The dataset attributes are discretised according to the mean of the attributes across all samples. If the attribute is greater than the mean, it will go to the right subtree, if the attribute is less than the mean, it will go to the left subtree. Windowed glass is given by the value `1.0` whereas non-windowed glass is given by the value `0.0`.
 
-### Gaussian Naive Bayes
-I assume a gaussian distribution for the dataset in question with independent samples, thus I diagonalize the covariance matrix.
-
-### Gaussian Optimal Bayes
-I assume a gaussian distribution for the dataset in question with dependent samples, thus I do not diagonalize the covariance matrix.
+### Bayesian
+I assume a gaussian distribution for both Bayesian classifiers. Naive Bayes assumes independent samples, thus I diagonalize the covariance matrix, whereas optimal Bayes assumes dependent samples, thus I do not diagonalize the covariance matrix.
 
 ## Accuracy
-* Based on 5-fold cross validation on 214 samples
+* *Based on 5-fold cross validation on 214 samples*
 ### Decision Tree
 #####
 78.4%
-* Future work: The accuracy can be greatly improved by using a better discretisation function, and overfitting can be limited tree pruning.
+* *Future work: The accuracy can be greatly improved by using a better discretisation function, and overfitting can be limited tree pruning.*
 
 ### Naive Bayes
 90.6%
@@ -68,3 +64,14 @@ I assume a gaussian distribution for the dataset in question with dependent samp
 1. `pip install -r requirements.txt`
 2. `python classify.py`
 3. Check console output
+
+## Screenshots
+### Bayesian Classifiers
+![image](https://github.com/altin/glass-classifier-ml/blob/master/bayesexample.PNG)
+
+### Decision Tree Classifier
+![image](https://github.com/altin/glass-classifier-ml/blob/master/dtexample.PNG)
+* The numbers (nodes) represent the position (starting from zero) of the attribute at that level of the decision tree. For example `2` is `magnesium` on level `0`, whereas `2` is `aluminum` on level `1` since `magnesium` is removed from the attribute list. The `D:` represents the decision to be made by the tree, where `1.0` is windowed glass, and `0.0` is non-windowed glass.  
+* The accuracy per fold is given by the correctly labelled samples versus the total unlabelled in the fold.
+
+
