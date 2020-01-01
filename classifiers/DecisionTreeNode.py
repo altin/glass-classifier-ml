@@ -9,7 +9,6 @@ class Node:
     
     def display(self):
         lines, _, _, _ = self.display_aux()
-        print("Left = 0, Right = 1")
         for line in lines:
             print(line)
         print()
