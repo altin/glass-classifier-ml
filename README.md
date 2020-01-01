@@ -42,7 +42,7 @@ Windowed glass is given by class attributes 1 to 4, and non-windowed glass is gi
 #### Information gain
 The information gain is calculated using the usual entropy measure for decision trees.
 
-### Discretisation function
+#### Discretisation function
 The dataset attributes are discretised according to the mean of the attributes across all samples.
 
 ### Gaussian Naive Bayes
