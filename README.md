@@ -52,7 +52,7 @@ I assume a gaussian distribution for both Bayesian classifiers. Naive Bayes assu
 ### Decision Tree
 #####
 78.4%
-* *Future work: The accuracy can be greatly improved by using a better discretisation function, and overfitting can be limited tree pruning.*
+* *Future work: The accuracy can be greatly improved by using a better discretisation function, and overfitting can be limited by tree pruning.*
 
 ### Naive Bayes
 90.6%
