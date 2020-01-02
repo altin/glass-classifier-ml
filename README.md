@@ -42,7 +42,7 @@ Windowed glass is given by class attributes 1 to 4, and non-windowed glass is gi
 The information gain is calculated using the usual entropy measure for decision trees.
 
 #### Discretisation function
-The dataset attributes are discretised according to the mean of the attributes across all samples. If the attribute is greater than the mean, it will go to the right subtree, if the attribute is less than the mean, it will go to the left subtree. Windowed glass is given by the value `1.0` whereas non-windowed glass is given by the value `0.0`.
+The dataset attributes are discretised according to the mean of the attributes across all samples. If the sample has an attribute greater than the mean of that attribute, it will go to the right subtree, otherwise, it will go to the left subtree. Windowed glass is given by the value `1.0` whereas non-windowed glass is given by the value `0.0`.
 
 ### Bayesian
 I assume a gaussian distribution for both Bayesian classifiers. Naive Bayes assumes independent samples, thus I diagonalize the covariance matrix, whereas optimal Bayes assumes dependent samples, thus I do not diagonalize the covariance matrix.
